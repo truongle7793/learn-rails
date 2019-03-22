@@ -5,8 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby '2.4.1'
-gem 'rails', '~> 5.1.2'
+ruby '2.6.1'
+gem 'rails'
 
 # Rails defaults
 gem 'puma', '~> 3.7'
@@ -36,12 +36,9 @@ group :development do
   gem 'better_errors'
   gem 'rails_layout'
 end
-group :development, :test do
-  gem 'sqlite3'
-end
-group :production do
-  gem 'pg'
-end
+
+gem 'sqlite3', '~> 1.3.6'
+
 group :test do
   gem 'minitest-spec-rails'
 end
